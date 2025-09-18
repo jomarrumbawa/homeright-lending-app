@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Contact Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-black min-h-screen">
+    <div class="max-w-2xl mx-auto py-12 px-6">
+      <div class="flex justify-center mb-8">
+  <img src="images/logo.jpeg" alt="HomeRight Lending Logo" class="h-40 w-auto rounded-lg" />
+      </div>
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl font-bold mb-4">Mortgage Application</h1>
+        <p class="text-lg text-gray-600">
+          Complete the form below to get started with your mortgage application
+        </p>
+      </div>
+
+      <form class="space-y-8">
+        <!-- Personal Information -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
+            Personal Information
+          </h2>
+
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2"
+              >Full Name *</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-2"
+                >Phone Number *</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="zip" class="block text-sm font-medium mb-2"
+                >Zip Code *</label
+              >
+              <input
+                type="text"
+                id="zip"
+                name="zip"
+                required
+                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2"
+              >Email Address *</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <!-- Loan Information -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
+            Loan Information
+          </h2>
+
+          <div>
+            <label class="block text-sm font-medium mb-3">Type of Loan *</label>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="loan_type"
+                  value="home_purchase"
+                  class="mr-3"
+                  required
+                />
+                <span>Home Purchase</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="loan_type"
+                  value="home_refinance"
+                  class="mr-3"
+                />
+                <span>Home Refinance</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="loan_type"
+                  value="heloc"
+                  class="mr-3"
+                />
+                <span>HELOC</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >What type of property are you purchasing? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_type"
+                  value="single_family"
+                  class="mr-3"
+                  required
+                />
+                <span>Single Family Home</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_type"
+                  value="townhome"
+                  class="mr-3"
+                />
+                <span>Townhome</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_type"
+                  value="condominium"
+                  class="mr-3"
+                />
+                <span>Condominium</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_type"
+                  value="multi_family"
+                  class="mr-3"
+                />
+                <span>Multi Family Home</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >How will this property be used? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_use"
+                  value="primary"
+                  class="mr-3"
+                  required
+                />
+                <span>Primary Residence</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_use"
+                  value="second_home"
+                  class="mr-3"
+                />
+                <span>Second Home</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="property_use"
+                  value="investment"
+                  class="mr-3"
+                />
+                <span>Investment or Rental</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >Is this your first time purchasing a property? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="first_time"
+                  value="yes"
+                  class="mr-3"
+                  required
+                />
+                <span>Yes</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="first_time" value="no" class="mr-3" />
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >Where are you in the homebuying process? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="buying_process"
+                  value="offer_accepted"
+                  class="mr-3"
+                  required
+                />
+                <span>Offer accepted by seller</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="buying_process"
+                  value="making_offers"
+                  class="mr-3"
+                />
+                <span>Making offers</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="buying_process"
+                  value="open_houses"
+                  class="mr-3"
+                />
+                <span>Going to open houses</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="buying_process"
+                  value="researching"
+                  class="mr-3"
+                />
+                <span>Researching options</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Information -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
+            Financial Information
+          </h2>
+
+          <div>
+            <label for="purchase_price" class="block text-sm font-medium mb-2"
+              >Estimated purchase price of the property *</label
+            >
+            <select
+              id="purchase_price"
+              name="purchase_price"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            >
+              <option value="">Select price range</option>
+              <option value="80k-150k">$80K - $150K</option>
+              <option value="150k-250k">$150K - $250K</option>
+              <option value="250k-400k">$250K - $400K</option>
+              <option value="400k-600k">$400K - $600K</option>
+              <option value="600k-800k">$600K - $800K</option>
+              <option value="800k-1m">$800K - $1M</option>
+              <option value="1m-1.5m">$1M - $1.5M</option>
+              <option value="1.5m-2m">$1.5M - $2M</option>
+              <option value="2m+">$2M+</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >What is your estimated down payment? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="down_payment"
+                  value="less_than_20"
+                  class="mr-3"
+                  required
+                />
+                <span>Less than 20%</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="down_payment"
+                  value="20_percent"
+                  class="mr-3"
+                />
+                <span>20%</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="down_payment"
+                  value="more_than_20"
+                  class="mr-3"
+                />
+                <span>More than 20%</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="credit_score" class="block text-sm font-medium mb-2"
+              >Estimated credit score *</label
+            >
+            <select
+              id="credit_score"
+              name="credit_score"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            >
+              <option value="">Select credit score range</option>
+              <option value="780+">780+</option>
+              <option value="760-779">760-779</option>
+              <option value="740-759">740-759</option>
+              <option value="720-739">720-739</option>
+              <option value="700-719">700-719</option>
+              <option value="680-699">680-699</option>
+              <option value="660-679">660-679</option>
+              <option value="640-659">640-659</option>
+              <option value="620-639">620-639</option>
+              <option value="580-619">580-619</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="annual_income" class="block text-sm font-medium mb-2"
+              >Gross annual income *</label
+            >
+            <select
+              id="annual_income"
+              name="annual_income"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            >
+              <option value="">Select income range</option>
+              <option value="0-50k">$0 - $50K</option>
+              <option value="50k-75k">$50K - $75K</option>
+              <option value="75k-100k">$75K - $100K</option>
+              <option value="100k-150k">$100K - $150K</option>
+              <option value="150k-200k">$150K - $200K</option>
+              <option value="200k-250k">$200K - $250K</option>
+              <option value="250k+">$250K+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
+            Additional Information
+          </h2>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >Are you or your spouse an active military member, reserve member,
+              or veteran? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="military"
+                  value="yes"
+                  class="mr-3"
+                  required
+                />
+                <span>Yes</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="military" value="no" class="mr-3" />
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >What's your employment status? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="employed"
+                  class="mr-3"
+                  required
+                />
+                <span>Employed</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="not_employed"
+                  class="mr-3"
+                />
+                <span>Not Employed</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="self_employed"
+                  class="mr-3"
+                />
+                <span>Self Employed</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="military"
+                  class="mr-3"
+                />
+                <span>Military</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="retired"
+                  class="mr-3"
+                />
+                <span>Retired</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="other"
+                  class="mr-3"
+                />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-3"
+              >Have you filed for bankruptcy or foreclosure in the last four
+              years? *</label
+            >
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="radio"
+                  name="bankruptcy"
+                  value="yes"
+                  class="mr-3"
+                  required
+                />
+                <span>Yes</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="bankruptcy" value="no" class="mr-3" />
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-8">
+          <button
+            type="submit"
+            class="w-full bg-black text-white py-4 px-6 font-semibold hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
+          >
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for your application! We will contact you soon.");
+      });
+    </script>
+
+    <!-- Contacts Section -->
+    <footer class="bg-gray-50 py-10 mt-16">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-8 text-center">Contact Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Deandre Coulter -->
+          <div class="flex flex-col items-center bg-white p-6 rounded-lg border border-gray-200">
+            <img src="images/deandre.jpeg" alt="Deandre Coulter" class="h-32 w-32 rounded-full mb-4 object-cover" />
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-2">Deandre Coulter</h3>
+              <p class="text-gray-700 mb-1">206-390-1216</p>
+              <a href="mailto:deandre@myhomeright.com" class="text-blue-600 hover:underline">deandre@myhomeright.com</a>
+            </div>
+          </div>
+          <!-- Wayland Coleman -->
+          <div class="flex flex-col items-center bg-white p-6 rounded-lg border border-gray-200">
+            <img src="images/wayland.jpeg" alt="Wayland Coleman" class="h-32 w-32 rounded-full mb-4 object-cover object-[center_90%]" />
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-2">Wayland Coleman</h3>
+              <p class="text-gray-700 mb-1">206-963-4788</p>
+              <a href="mailto:wayland@myhomeright.com" class="text-blue-600 hover:underline">wayland@myhomeright.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
