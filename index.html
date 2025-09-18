@@ -31,65 +31,20 @@
         class="space-y-8"
         action="https://docs.google.com/forms/d/e/1FAIpQLSc2QmqYHEZoZ1YyAdUEhkbTgyFkkpYmcxqlhLLmInw-XMkMDg/formResponse"
       >
-        <!-- Personal Information -->
-        <div class="space-y-6">
-          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
-            Personal Information
-          </h2>
-
-          <div>
-            <label for="name" class="block text-sm font-medium mb-2"
-              >Full Name *</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="entry.1563342504"
-              required
-              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label for="phone" class="block text-sm font-medium mb-2"
-                >Phone Number *</label
-              >
-              <input
-                type="tel"
-                id="phone"
-                name="entry.408086429"
-                required
-                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
-              />
-            </div>
-            <div>
-              <label for="zip" class="block text-sm font-medium mb-2"
-                >Zip Code *</label
-              >
-              <input
-                type="text"
-                id="zip"
-                name="entry.223701792"
-                required
-                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label for="email" class="block text-sm font-medium mb-2"
-              >Email Address *</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="entry.1904992092"
-              required
-              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
-            />
-          </div>
+        <!-- Zip Code at top -->
+        <div class="mb-8">
+          <label for="zip" class="block text-sm font-medium mb-2"
+            >Zip Code *</label
+          >
+          <input
+            type="text"
+            id="zip"
+            name="entry.223701792"
+            required
+            class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+          />
         </div>
+        <!-- ...existing code... -->
 
         <!-- Loan Information -->
         <div class="space-y-6">
@@ -522,6 +477,52 @@
           </div>
         </div>
 
+        <!-- Personal Information (moved to bottom) -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2">
+            Personal Information
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2"
+                >Full Name *</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="entry.1563342504"
+                required
+                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-2"
+                >Phone Number *</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="entry.408086429"
+                required
+                class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2"
+              >Email Address *</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="entry.1904992092"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none"
+            />
+          </div>
+        </div>
         <!-- Submit Button -->
         <div class="pt-8">
           <button
